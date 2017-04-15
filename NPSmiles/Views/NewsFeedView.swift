@@ -12,9 +12,13 @@ class NewsFeedView: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    self.title = "Feed"
+    self.navigationItem.title = "Feed"
   }
 
+  func setupViews() {
+    
+  }
+  
+  
 
 }
