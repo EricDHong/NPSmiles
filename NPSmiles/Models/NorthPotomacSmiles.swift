@@ -13,9 +13,9 @@ struct NorthPotomacSmiles {
   
   let legalName = "North Potomac Smiles, LLC."
   let email = "info@northpotomacsmiles.com"
-  let telephoneText = "\nTelephone: "
+  let telephoneText = "\n\nTelephone: "
   let phoneNumber = "301.926.4408"
-  let faxText = "\nFax: "
+  let faxText = "\n\n             Fax: "
   let faxNumber = "301.926.4405"
   let address = "15200 Shady Grove Rd, #408"
   let cityState = "Rockville, MD 20850"
