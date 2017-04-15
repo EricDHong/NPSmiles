@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		1A1CA8781EA1FFC9001A3192 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1CA8771EA1FFC9001A3192 /* AppDelegate.swift */; };
 		1A1CA87F1EA1FFC9001A3192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1CA87E1EA1FFC9001A3192 /* Assets.xcassets */; };
-		1A1CA8821EA1FFC9001A3192 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1CA8801EA1FFC9001A3192 /* LaunchScreen.storyboard */; };
 		1A1CA88E1EA203F3001A3192 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1CA88D1EA203F3001A3192 /* NewsFeedViewController.swift */; };
 		1A1CA8901EA20408001A3192 /* NewsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1CA88F1EA20408001A3192 /* NewsFeedView.swift */; };
+		1A1CA8921EA20582001A3192 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1CA8911EA20582001A3192 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A1CA8741EA1FFC9001A3192 /* NPSmiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NPSmiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1CA8771EA1FFC9001A3192 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A1CA87E1EA1FFC9001A3192 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1A1CA8811EA1FFC9001A3192 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A1CA8831EA1FFC9001A3192 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A1CA88D1EA203F3001A3192 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		1A1CA88F1EA20408001A3192 /* NewsFeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedView.swift; sourceTree = "<group>"; };
+		1A1CA8911EA20582001A3192 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 		1A1CA8891EA1FFE7001A3192 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1A1CA8801EA1FFC9001A3192 /* LaunchScreen.storyboard */,
+				1A1CA8911EA20582001A3192 /* Launch Screen.storyboard */,
 				1A1CA88F1EA20408001A3192 /* NewsFeedView.swift */,
 			);
 			path = Views;
@@ -156,7 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A1CA8821EA1FFC9001A3192 /* LaunchScreen.storyboard in Resources */,
+				1A1CA8921EA20582001A3192 /* Launch Screen.storyboard in Resources */,
 				1A1CA87F1EA1FFC9001A3192 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,17 +175,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		1A1CA8801EA1FFC9001A3192 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A1CA8811EA1FFC9001A3192 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1A1CA8841EA1FFC9001A3192 /* Debug */ = {
@@ -328,6 +317,7 @@
 				1A1CA8881EA1FFC9001A3192 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
