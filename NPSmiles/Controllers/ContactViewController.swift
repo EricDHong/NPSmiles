@@ -10,28 +10,29 @@ import UIKit
 
 class ContactViewController: ContactView {
   
-  var company = NorthPotomacSmiles()
+  var npsCompany = NorthPotomacSmiles()
   let finalAttributedText = NSMutableAttributedString()
   
   override func loadView() {
     super.loadView()
-    setTextView()
+    legalNameLabel.text = npsCompany.legalName
+    setTextOfContactTextView()
   }
   
-  func setTextView() {
+  func setTextOfContactTextView() {
     let nonlinkAttributes = makeAttribute(withSize: 24.0, ofColor: .black)
     let linkAttributes = makeAttribute(withSize: 24.0, ofColor: .blue)
-    company.initFinalTextArray()
-    for index in 0..<company.finalTextArray.count {
-      attributeText(of: company.finalTextArray[index], with: (index % 2 == 0) ? linkAttributes : nonlinkAttributes)
+    npsCompany.initFinalTextArray()
+    for index in 0..<npsCompany.finalTextArray.count {
+      attributeText(of: npsCompany.finalTextArray[index], with: (index % 2 == 0) ? linkAttributes : nonlinkAttributes)
     }
     contactInfoTextView.attributedText = finalAttributedText
   }
   
   func makeAttribute(withSize size:CGFloat,ofColor textColor:UIColor) -> [String:Any] {
     let fontAttribute = UIFont.systemFont(ofSize: size, weight: UIFontWeightLight)
-    let customAttribute:[String:Any] = [ NSForegroundColorAttributeName : textColor,
-                                                    NSFontAttributeName : fontAttribute]
+    let customAttribute = [ NSForegroundColorAttributeName : textColor,
+                                       NSFontAttributeName : fontAttribute]
     return customAttribute
   }
   
