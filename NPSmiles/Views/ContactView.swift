@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class ContactView: UIViewController {
   
@@ -28,6 +29,19 @@ class ContactView: UIViewController {
     return textView
   }()
   
+  private let googleMapView:GMSMapView = {
+    let camera = GMSCameraPosition.camera(withLatitude: 39.104729, longitude: -77.191294, zoom: 16.0)
+    let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
+    mapView.isBuildingsEnabled = true
+    let marker = GMSMarker()
+    marker.position = CLLocationCoordinate2D(latitude: 39.104729, longitude: -77.191294)
+    marker.title = "Located on 4th Floor #408"
+    marker.snippet = "North Potomac Smiles"
+    marker.map = mapView
+    mapView.selectedMarker = marker
+    return mapView
+  }()
+  
   override func loadView() {
     super.loadView()
     addSubviews()
@@ -40,7 +54,7 @@ class ContactView: UIViewController {
   }
   
   private func addSubviews() {
-    let views = [legalNameLabel, contactInfoTextView]
+    let views = [legalNameLabel, contactInfoTextView, googleMapView]
     for view in views {
       self.view.addSubview(view)
     }
@@ -49,19 +63,21 @@ class ContactView: UIViewController {
   private func disableAutoresizingMaskIntoConstraints() {
     legalNameLabel.translatesAutoresizingMaskIntoConstraints = false
     contactInfoTextView.translatesAutoresizingMaskIntoConstraints = false
+    googleMapView.translatesAutoresizingMaskIntoConstraints = false
   }
   
   private func setupConstraints() {
-    viewsDictionary = ["v0":legalNameLabel, "v1":contactInfoTextView] as [String:Any]
+    viewsDictionary = ["v0":legalNameLabel, "v1":contactInfoTextView, "v2":googleMapView] as [String:Any]
     disableAutoresizingMaskIntoConstraints()
     
-    let height = self.navigationController?.navigationBar.frame.size.height
-    let padding = height! + 15
-    let navBarHeight = String(describing: padding)
+    let navBarHeight = self.navigationController?.navigationBar.frame.size.height
+    let height = navBarHeight! + 20
+    let padding = String(describing: height)
     
     configureConstraint(with: "H:|-8-[v0]-8-|", to: self.view, of: viewsDictionary!)
     configureConstraint(with: "H:|-8-[v1]-8-|", to: self.view, of: viewsDictionary!)
-    configureConstraint(with: "V:|-\(navBarHeight)-[v0(50)][v1(150)]",
+    configureConstraint(with: "H:|-8-[v2]-8-|", to: self.view, of: viewsDictionary!)
+    configureConstraint(with: "V:|-\(padding)-[v0(50)][v1(100)][v2(200)]",
                           to: self.view,
                           of: viewsDictionary!)
   }
@@ -87,12 +103,9 @@ extension UIViewController {
   func makeText(_ text:String, color:UIColor,size fontSize:CGFloat,weight:CGFloat) -> NSMutableAttributedString {
     let textsnippet = text
     let textColor = color
-    let style = NSMutableParagraphStyle()
-    style.alignment = .center
     let font = UIFont.systemFont(ofSize: fontSize, weight: weight)
     let attributes = [NSForegroundColorAttributeName : textColor,
-                                 NSFontAttributeName : font,
-                       NSParagraphStyleAttributeName : style
+                                 NSFontAttributeName : font
     ]
     let attributedText = NSMutableAttributedString(string: textsnippet, attributes: attributes)
     return attributedText

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let tabBarController = UITabBarController()
 
   internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    GMSServices.provideAPIKey("AIzaSyDu7AFyu0ksAf57OLoLMQoHytG3t5LFFkc")
     setupTabBarViewControllers()
     setRootViewController(to:tabBarController)
     return true

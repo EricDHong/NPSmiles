@@ -31,8 +31,11 @@ class ContactViewController: ContactView {
   
   func makeAttribute(withSize size:CGFloat,ofColor textColor:UIColor) -> [String:Any] {
     let fontAttribute = UIFont.systemFont(ofSize: size, weight: UIFontWeightLight)
+    let style = NSMutableParagraphStyle()
+    style.alignment = .right
     let customAttribute = [ NSForegroundColorAttributeName : textColor,
-                                       NSFontAttributeName : fontAttribute]
+                                       NSFontAttributeName : fontAttribute,
+                                       NSParagraphStyleAttributeName : style]
     return customAttribute
   }
   
