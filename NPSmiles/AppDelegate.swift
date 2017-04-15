@@ -20,10 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let newsfeedVC = NewsFeedViewController()
     let navNewsFeedVC = UINavigationController(rootViewController: newsfeedVC)
+    let contactVC = ContactViewController()
+    let navContactVC = UINavigationController(rootViewController: contactVC)
     
     let tabBarController = UITabBarController()
-    tabBarController.viewControllers = [navNewsFeedVC]
-    tabBarController.tabBarItem.title = "Feed"
+    tabBarController.viewControllers = [navNewsFeedVC, navContactVC]
     window?.rootViewController = tabBarController
     return true
   }
