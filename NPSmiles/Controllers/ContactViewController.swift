@@ -10,9 +10,8 @@ import UIKit
 
 class ContactViewController: ContactView {
   
-  let company = NorthPotomacSmiles()
+  var company = NorthPotomacSmiles()
   let finalAttributedText = NSMutableAttributedString()
-  var finalTextArray = [String]()
   
   override func loadView() {
     super.loadView()
@@ -20,23 +19,20 @@ class ContactViewController: ContactView {
   }
   
   func setTextView() {
-    let fontAttribute = UIFont.systemFont(ofSize: 24.0, weight: UIFontWeightLight)
-    let nonlinkAttributes:[String:Any] = [ NSForegroundColorAttributeName : UIColor.black,
-                                           NSFontAttributeName : fontAttribute]
-    let linkAttributes:[String:Any] = [ NSForegroundColorAttributeName : UIColor.blue,
-                                        NSFontAttributeName : fontAttribute]
-    
-    let emailText = "\(company.email)\n"
-    let phoneText1 = "Telephone: "
-    let phoneText2 = "\(company.phoneNumber)\n"
-    let faxText1 = "Fax: "
-    let faxText2 = "\(company.phoneNumber)\n"
-    
-    finalTextArray = [emailText, phoneText1, phoneText2, faxText1, faxText2]
-    for index in 0..<finalTextArray.count {
-      attributeText(of: finalTextArray[index], with: (index % 2 == 0) ? linkAttributes : nonlinkAttributes)
+    let nonlinkAttributes = makeAttribute(withSize: 24.0, ofColor: .black)
+    let linkAttributes = makeAttribute(withSize: 24.0, ofColor: .blue)
+    company.initFinalTextArray()
+    for index in 0..<company.finalTextArray.count {
+      attributeText(of: company.finalTextArray[index], with: (index % 2 == 0) ? linkAttributes : nonlinkAttributes)
     }
     contactInfoTextView.attributedText = finalAttributedText
+  }
+  
+  func makeAttribute(withSize size:CGFloat,ofColor textColor:UIColor) -> [String:Any] {
+    let fontAttribute = UIFont.systemFont(ofSize: size, weight: UIFontWeightLight)
+    let customAttribute:[String:Any] = [ NSForegroundColorAttributeName : textColor,
+                                                    NSFontAttributeName : fontAttribute]
+    return customAttribute
   }
   
   func attributeText(of text:String,with attributes:[String:Any]) {
