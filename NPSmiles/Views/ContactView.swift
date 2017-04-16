@@ -32,12 +32,6 @@ class ContactView: UIViewController {
   internal let googleMapView:GMSMapView = {
     let camera = GMSCameraPosition.camera(withLatitude: 39.104729, longitude: -77.191294, zoom: 16.0)
     let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
-    let marker = GMSMarker()
-    marker.position = CLLocationCoordinate2D(latitude: 39.104729, longitude: -77.191294)
-    marker.title = "Located on 4th Floor #408"
-    marker.snippet = "North Potomac Smiles"
-    marker.map = mapView
-    mapView.selectedMarker = marker
     return mapView
   }()
   
@@ -45,6 +39,7 @@ class ContactView: UIViewController {
     super.loadView()
     addSubviews()
     setupConstraints()
+    addMarker(to: googleMapView)
   }
 
   override func viewDidLoad() {
@@ -73,22 +68,21 @@ class ContactView: UIViewController {
     let height = navBarHeight! + 20
     let padding = String(describing: height)
     
-    configureConstraint(with: "H:|-8-[v0]-8-|", to: self.view, of: viewsDictionary!)
-    configureConstraint(with: "H:|-8-[v1]-8-|", to: self.view, of: viewsDictionary!)
-    configureConstraint(with: "H:|-8-[v2]-8-|", to: self.view, of: viewsDictionary!)
-    configureConstraint(with: "V:|-\(padding)-[v0(50)][v1(100)][v2(200)]",
-                          to: self.view,
-                          of: viewsDictionary!)
+    configureConstraint(with: "H:|-8-[v0]-8-|", to: view, of:viewsDictionary!)
+    configureConstraint(with: "H:|-8-[v1]-8-|", to: view, of:viewsDictionary!)
+    configureConstraint(with: "H:|-8-[v2]-8-|", to: view, of:viewsDictionary!)
+    configureConstraint(with: "V:|-\(padding)-[v0(50)][v1(100)][v2(200)]", to: self.view, of:viewsDictionary!)
+  }
+  
+  private func addMarker(to mapView: GMSMapView) {
+    let marker = GMSMarker()
+    marker.position = CLLocationCoordinate2D(latitude: 39.104729, longitude: -77.191294)
+    marker.title = "Located on 4th Floor #408"
+    marker.snippet = "North Potomac Smiles"
+    marker.map = mapView
+    mapView.selectedMarker = marker
   }
 }
-
-
-
-
-
-
-
-
 
 extension UIViewController {
   func configureConstraint(with visualFormat:String, to view:UIView, of dictionaryViews:[String:Any]) {
@@ -97,16 +91,5 @@ extension UIViewController {
                                                              metrics: nil,
                                                                views: dictionaryViews)
     view.addConstraints(constraint)
-  }
-  
-  func makeText(_ text:String, color:UIColor,size fontSize:CGFloat,weight:CGFloat) -> NSMutableAttributedString {
-    let textsnippet = text
-    let textColor = color
-    let font = UIFont.systemFont(ofSize: fontSize, weight: weight)
-    let attributes = [NSForegroundColorAttributeName : textColor,
-                                 NSFontAttributeName : font
-    ]
-    let attributedText = NSMutableAttributedString(string: textsnippet, attributes: attributes)
-    return attributedText
   }
 }
