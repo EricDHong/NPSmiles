@@ -29,10 +29,9 @@ class ContactView: UIViewController {
     return textView
   }()
   
-  private let googleMapView:GMSMapView = {
+  internal let googleMapView:GMSMapView = {
     let camera = GMSCameraPosition.camera(withLatitude: 39.104729, longitude: -77.191294, zoom: 16.0)
     let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
-    mapView.isBuildingsEnabled = true
     let marker = GMSMarker()
     marker.position = CLLocationCoordinate2D(latitude: 39.104729, longitude: -77.191294)
     marker.title = "Located on 4th Floor #408"
