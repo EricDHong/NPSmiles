@@ -29,10 +29,49 @@ class ContactView: UIViewController {
     return textView
   }()
   
-  internal let googleMapView:GMSMapView = {
+  private let googleMapView:GMSMapView = {
     let camera = GMSCameraPosition.camera(withLatitude: 39.104729, longitude: -77.191294, zoom: 16.0)
     let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
     return mapView
+  }()
+  
+  internal let addressButton:UIButton = {
+    let button = UIButton(type: .custom)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(self, action: #selector(ContactViewController.openAddress), for: .touchUpInside)
+    return button
+  }()
+  
+  private let officeHourLabel:UILabel = {
+    let label = UILabel()
+    label.text = "OFFICE HOURS"
+    label.textAlignment = .center
+    label.font = UIFont.systemFont(ofSize: 24.0, weight: UIFontWeightLight)
+    return label
+  }()
+  
+  private let containerForTextViews:UIView = {
+    let view = UIView()
+    view.backgroundColor = .white
+    return view
+  }()
+  
+  internal let daysOfTheWeekTextView:UITextView = {
+    let textView = UITextView()
+    textView.text = "Hello:"
+    textView.textAlignment = .right
+    textView.textColor = .black
+    textView.backgroundColor = .yellow
+    return textView
+  }()
+  
+  internal let officeHoursTimeTextView:UITextView = {
+    let textView = UITextView()
+    textView.text = "World"
+    textView.textAlignment = .left
+    textView.textColor = .black
+    textView.backgroundColor = .clear
+    return textView
   }()
   
   override func loadView() {
@@ -44,34 +83,66 @@ class ContactView: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navigationItem.title = "Contact"
+    self.navigationItem.title = "Contact Info"
   }
   
   private func addSubviews() {
-    let views = [legalNameLabel, contactInfoTextView, googleMapView]
-    for view in views {
-      self.view.addSubview(view)
+    let views = [legalNameLabel,
+                 contactInfoTextView,
+                 googleMapView,
+                 addressButton,
+                 officeHourLabel,
+                 containerForTextViews]
+    for viewObject in views {
+      view.addSubview(viewObject)
     }
+    containerForTextViews.addSubview(daysOfTheWeekTextView)
+    containerForTextViews.addSubview(officeHoursTimeTextView)
   }
   
   private func disableAutoresizingMaskIntoConstraints() {
     legalNameLabel.translatesAutoresizingMaskIntoConstraints = false
     contactInfoTextView.translatesAutoresizingMaskIntoConstraints = false
     googleMapView.translatesAutoresizingMaskIntoConstraints = false
+    addressButton.translatesAutoresizingMaskIntoConstraints = false
+    officeHourLabel.translatesAutoresizingMaskIntoConstraints = false
+    containerForTextViews.translatesAutoresizingMaskIntoConstraints = false
+    daysOfTheWeekTextView.translatesAutoresizingMaskIntoConstraints = false
+    officeHoursTimeTextView.translatesAutoresizingMaskIntoConstraints = false
   }
   
   private func setupConstraints() {
-    viewsDictionary = ["v0":legalNameLabel, "v1":contactInfoTextView, "v2":googleMapView] as [String:Any]
     disableAutoresizingMaskIntoConstraints()
+    viewsDictionary = ["v0":legalNameLabel,
+                       "v1":contactInfoTextView,
+                       "v2":googleMapView,
+                       "v3":addressButton,
+                       "v4":officeHourLabel,
+                       "v5":containerForTextViews,
+                       "v6":daysOfTheWeekTextView,
+                       "v7":officeHoursTimeTextView] as [String:Any]
     
     let navBarHeight = self.navigationController?.navigationBar.frame.size.height
-    let height = navBarHeight! + 20
-    let padding = String(describing: height)
+    let navHeightPadding = navBarHeight! + 20
+    let navPadding = String(describing: navHeightPadding)
+    
+    let tabBarHeight = self.tabBarController?.tabBar.frame.size.height
+    let tabHeightPadding = tabBarHeight!
+    let tabPadding = String(describing: tabHeightPadding)
     
     configureConstraint(with: "H:|-8-[v0]-8-|", to: view, of:viewsDictionary!)
     configureConstraint(with: "H:|-8-[v1]-8-|", to: view, of:viewsDictionary!)
     configureConstraint(with: "H:|-8-[v2]-8-|", to: view, of:viewsDictionary!)
-    configureConstraint(with: "V:|-\(padding)-[v0(50)][v1(100)][v2(200)]", to: self.view, of:viewsDictionary!)
+    configureConstraint(with: "H:|-8-[v3]-8-|", to: view, of:viewsDictionary!)
+    configureConstraint(with: "H:|-8-[v4]-8-|", to: view, of:viewsDictionary!)
+    configureConstraint(with: "H:|[v5]|", to: view, of: viewsDictionary!)
+    configureConstraint(with: "V:|-\(navPadding)-[v0(40)][v1(100)][v2(200)][v3(40)][v4(50)][v5]-\(tabPadding)-|",
+                          to: self.view,
+                          of:viewsDictionary!)
+    configureConstraint(with: "H:|-8-[v6(50)]-2-[v7]-8-|", to: containerForTextViews, of:viewsDictionary!)
+    configureConstraint(with: "V:|[v6]|", to: containerForTextViews, of:viewsDictionary!)
+    configureConstraint(with: "V:|[v7]|", to: containerForTextViews, of:viewsDictionary!)
+
   }
   
   private func addMarker(to mapView: GMSMapView) {
