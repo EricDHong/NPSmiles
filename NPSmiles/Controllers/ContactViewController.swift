@@ -48,7 +48,7 @@ class ContactViewController: ContactView {
   }
   
   func openAddress() {
-    UIApplication.shared.open(URL(string:"https://www.google.com/maps/@42.585444,13.007813,6z")!)
+    UIApplication.shared.open(URL(string:"https://www.google.com/maps/place/North+Potomac+Smiles/@39.1046951,-77.1934817,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7cd544377fb59:0x72b1526f4e688fa3!8m2!3d39.104691!4d-77.191293")!)
   }
 
 }
