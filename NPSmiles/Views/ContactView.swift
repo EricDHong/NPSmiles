@@ -62,6 +62,8 @@ class ContactView: UIViewController {
     textView.font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
     textView.textAlignment = .right
     textView.textColor = .black
+    textView.isEditable = false
+    textView.isSelectable = false
     return textView
   }()
   
@@ -70,6 +72,8 @@ class ContactView: UIViewController {
     textView.font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
     textView.textAlignment = .left
     textView.textColor = .black
+    textView.isEditable = false
+    textView.isSelectable = false
     return textView
   }()
   
