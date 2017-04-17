@@ -15,7 +15,7 @@ class ContactView: UIViewController {
   
   internal let legalNameLabel:UILabel = {
     let label = UILabel()
-    label.font = UIFont.systemFont(ofSize: 28.0, weight: UIFontWeightLight)
+    label.font = UIFont.systemFont(ofSize: 24.0, weight: UIFontWeightLight)
     label.textAlignment = .center
     return label
   }()
@@ -32,6 +32,7 @@ class ContactView: UIViewController {
   private let googleMapView:GMSMapView = {
     let camera = GMSCameraPosition.camera(withLatitude: 39.104729, longitude: -77.191294, zoom: 16.0)
     let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
+    mapView.padding = UIEdgeInsetsMake(90, 0, 0, 0)
     return mapView
   }()
   
@@ -56,21 +57,19 @@ class ContactView: UIViewController {
     return view
   }()
   
-  internal let daysOfTheWeekTextView:UITextView = {
+  internal var daysOfTheWeekTextView:UITextView = {
     let textView = UITextView()
-    textView.text = "Hello:"
+    textView.font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
     textView.textAlignment = .right
     textView.textColor = .black
-    textView.backgroundColor = .yellow
     return textView
   }()
   
-  internal let officeHoursTimeTextView:UITextView = {
+  internal var officeHoursTimeTextView:UITextView = {
     let textView = UITextView()
-    textView.text = "World"
+    textView.font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
     textView.textAlignment = .left
     textView.textColor = .black
-    textView.backgroundColor = .clear
     return textView
   }()
   
@@ -136,10 +135,10 @@ class ContactView: UIViewController {
     configureConstraint(with: "H:|-8-[v3]-8-|", to: view, of:viewsDictionary!)
     configureConstraint(with: "H:|-8-[v4]-8-|", to: view, of:viewsDictionary!)
     configureConstraint(with: "H:|[v5]|", to: view, of: viewsDictionary!)
-    configureConstraint(with: "V:|-\(navPadding)-[v0(40)][v1(100)][v2(200)][v3(40)][v4(50)][v5]-\(tabPadding)-|",
+    configureConstraint(with: "V:|-\(navPadding)-[v0(40)][v1(100)][v2(150)][v3(40)][v4(40)][v5]-\(tabPadding)-|",
                           to: self.view,
                           of:viewsDictionary!)
-    configureConstraint(with: "H:|-8-[v6(50)]-2-[v7]-8-|", to: containerForTextViews, of:viewsDictionary!)
+    configureConstraint(with: "H:|-8-[v6(175)]-2-[v7]-8-|", to: containerForTextViews, of:viewsDictionary!)
     configureConstraint(with: "V:|[v6]|", to: containerForTextViews, of:viewsDictionary!)
     configureConstraint(with: "V:|[v7]|", to: containerForTextViews, of:viewsDictionary!)
 
