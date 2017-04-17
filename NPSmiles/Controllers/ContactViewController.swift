@@ -10,21 +10,22 @@ import UIKit
 
 class ContactViewController: ContactView {
   
-  var npsCompany = NorthPotomacSmiles()
   let finalAttributedText = NSMutableAttributedString()
   
-  override func loadView() {
-    super.loadView()
-    legalNameLabel.text = npsCompany.legalName
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    legalNameLabel.text = NorthPotomacSmiles.legalName
     setTextOfContactTextView()
+    addressButton.setTitle("\(NorthPotomacSmiles.address) Rockville, MD", for: .normal)
+    daysOfTheWeekTextView.text = NorthPotomacSmiles.daysOfWeek
+    officeHoursTimeTextView.text = NorthPotomacSmiles.officeHourTime
   }
   
   func setTextOfContactTextView() {
-    let nonlinkAttributes = makeAttribute(withSize: 24.0, ofColor: .black)
-    let linkAttributes = makeAttribute(withSize: 24.0, ofColor: .blue)
-    npsCompany.initFinalTextArray()
-    for index in 0..<npsCompany.finalTextArray.count {
-      attributeText(of: npsCompany.finalTextArray[index], with: (index % 2 == 0) ? linkAttributes : nonlinkAttributes)
+    let nonlinkAttributes = makeAttribute(withSize: 20.0, ofColor: .black)
+    let linkAttributes = makeAttribute(withSize: 20.0, ofColor: .blue)
+    for index in 0..<NorthPotomacSmiles.finalTextArray.count {
+      attributeText(of: NorthPotomacSmiles.finalTextArray[index], with: (index % 2 == 0) ? linkAttributes : nonlinkAttributes)
     }
     contactInfoTextView.attributedText = finalAttributedText
   }
@@ -44,6 +45,10 @@ class ContactViewController: ContactView {
     let attrText = NSMutableAttributedString(string: text)
     attrText.addAttributes(attributes, range: NSRange(0..<text.characters.count))
     finalAttributedText.append(attrText)
+  }
+  
+  func openAddress() {
+    UIApplication.shared.open(URL(string:"https://www.google.com/maps/@42.585444,13.007813,6z")!)
   }
 
 }

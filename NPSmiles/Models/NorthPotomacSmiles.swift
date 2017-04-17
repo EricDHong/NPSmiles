@@ -9,18 +9,21 @@
 import Foundation
 
 struct NorthPotomacSmiles {
-  var finalTextArray = [String]()
   
-  let legalName = "North Potomac Smiles, LLC."
-  let email = "info@northpotomacsmiles.com"
-  let telephoneText = "\nTelephone: "
-  let phoneNumber = "301.926.4408"
-  let faxText = "\n             Fax: "
-  let faxNumber = "301.926.4405"
-  let address = "15200 Shady Grove Rd, #408"
-  let cityState = "Rockville, MD 20850"
+  static let legalName = "North Potomac Smiles, LLC."
+  static let email = "info@northpotomacsmiles.com"
+  static let telephoneText = "\nTelephone: "
+  static let phoneNumber = "301.926.4408"
+  static let faxText = "\n             Fax: "
+  static let faxNumber = "301.926.4405"
+  static let address = "15200 Shady Grove Rd, #408"
+  static let cityState = "Rockville, MD"
+  static let daysOfWeek = "Monday:\nTuesday:\nWednesday:\nThursday:\nFriday:\nSat & Sun"
+  static let officeHourTime = "8:30am-5pm\n8:30am-5pm\n8:30am-5pm\n8:30am-5pm\n7:30am-3pm\nCLOSED"
   
-  mutating func initFinalTextArray() {
-    finalTextArray = [email, telephoneText, phoneNumber, faxText, faxNumber]
-  }
+  static let finalTextArray = [NorthPotomacSmiles.email,
+                               NorthPotomacSmiles.telephoneText,
+                               NorthPotomacSmiles.phoneNumber,
+                               NorthPotomacSmiles.faxText,
+                               NorthPotomacSmiles.faxNumber]
 }
