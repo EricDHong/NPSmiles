@@ -20,7 +20,8 @@ struct NorthPotomacSmiles {
   static let cityState = "Rockville, MD"
   static let officeHours = "monday: 8:30am-5pm\ntuesday: 8:30am-5pm\nwednesday: 8:30am-5pm\nthursday: 8:30am-5pm\nfriday: 7:30am-3pm\nsat & sun: CLOSED"
   
-  static let finalTextArray = [NorthPotomacSmiles.email,
+  static let finalTextArray = ["\(NorthPotomacSmiles.legalName)\n",
+                               NorthPotomacSmiles.email,
                                NorthPotomacSmiles.telephoneText,
                                NorthPotomacSmiles.phoneNumber,
                                NorthPotomacSmiles.faxText,

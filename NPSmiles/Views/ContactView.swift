@@ -16,13 +16,6 @@ class ContactView: UIViewController {
   private var scrollView = UIScrollView()
   private var contentView = UIView()
   
-  internal let legalNameLabel:UILabel = {
-    let label = UILabel()
-    label.font = UIFont.systemFont(ofSize: 25.0, weight: UIFontWeightThin)
-    label.textAlignment = .center
-    return label
-  }()
-  
   internal let contactInfoTextView: UITextView = {
     let textView = UITextView()
     textView.textAlignment = .center
@@ -55,6 +48,7 @@ class ContactView: UIViewController {
     textView.textColor = .black
     textView.isEditable = false
     textView.isSelectable = false
+    textView.isScrollEnabled = false
     return textView
   }()
   
@@ -82,8 +76,7 @@ class ContactView: UIViewController {
   }
   
   private func addSubviewsToContentView() {
-    let views = [legalNameLabel,
-                 contactInfoTextView,
+    let views = [contactInfoTextView,
                  googleMapView,
                  addressButton,
                  officeHoursTextView]
@@ -94,7 +87,6 @@ class ContactView: UIViewController {
   
   private func disableAutoresizingMaskIntoConstraints() {
     scrollView.translatesAutoresizingMaskIntoConstraints = false
-    legalNameLabel.translatesAutoresizingMaskIntoConstraints = false
     contactInfoTextView.translatesAutoresizingMaskIntoConstraints = false
     googleMapView.translatesAutoresizingMaskIntoConstraints = false
     addressButton.translatesAutoresizingMaskIntoConstraints = false
@@ -104,11 +96,10 @@ class ContactView: UIViewController {
   private func setupConstraints() {
     disableAutoresizingMaskIntoConstraints()
     viewsDictionary = ["v0":scrollView,
-                       "v1":legalNameLabel,
-                       "v2":contactInfoTextView,
-                       "v3":googleMapView,
-                       "v4":addressButton,
-                       "v5":officeHoursTextView] as [String:Any]
+                       "v1":contactInfoTextView,
+                       "v2":googleMapView,
+                       "v3":addressButton,
+                       "v4":officeHoursTextView] as [String:Any]
     
     configureConstraint(with: "H:|[v0]|", to: view, of: viewsDictionary!)
     configureConstraint(with: "V:|[v0]|", to: view, of: viewsDictionary!)
@@ -117,8 +108,7 @@ class ContactView: UIViewController {
     configureConstraint(with: "H:|-8-[v2]-8-|", to: contentView, of:viewsDictionary!)
     configureConstraint(with: "H:|-8-[v3]-8-|", to: contentView, of:viewsDictionary!)
     configureConstraint(with: "H:|-8-[v4]-8-|", to: contentView, of:viewsDictionary!)
-    configureConstraint(with: "H:|-8-[v5]-8-|", to: contentView, of:viewsDictionary!)
-    configureConstraint(with: "V:|[v1(45)][v2(110)][v3(175)]-2-[v4(40)][v5]|",
+    configureConstraint(with: "V:|[v1(130)][v2(175)]-2-[v3(40)][v4]|",
                           to: self.view,
                           of:viewsDictionary!)
 

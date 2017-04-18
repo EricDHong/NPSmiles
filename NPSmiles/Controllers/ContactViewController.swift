@@ -15,10 +15,9 @@ class ContactViewController: ContactView {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    legalNameLabel.text = NorthPotomacSmiles.legalName
-    setTextOfContactTextView()
-    addressButton.setTitle("\(NorthPotomacSmiles.address)", for: .normal)
     officeHoursTextView.text = "OFFICE HOURS:\n\(NorthPotomacSmiles.officeHours)"
+    addressButton.setTitle("\(NorthPotomacSmiles.address)", for: .normal)
+    setTextOfContactTextView()
     addMarker(to: googleMapView)
   }
   
@@ -26,7 +25,7 @@ class ContactViewController: ContactView {
     let nonlinkAttributes = makeAttribute(withSize: 22.0, ofColor: .black)
     let linkAttributes = makeAttribute(withSize: 21.5, ofColor: .blue)
     for index in 0..<NorthPotomacSmiles.finalTextArray.count {
-      attributeText(of: NorthPotomacSmiles.finalTextArray[index], with: (index % 2 == 0) ? linkAttributes : nonlinkAttributes)
+      attributeText(of: NorthPotomacSmiles.finalTextArray[index], with: (index % 2 == 0) ? nonlinkAttributes : linkAttributes)
     }
     contactInfoTextView.attributedText = finalAttributedText
   }
