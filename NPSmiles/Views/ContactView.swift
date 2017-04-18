@@ -76,6 +76,7 @@ class ContactView: UIViewController {
   private func setupScrollView() {
     scrollView.contentSize = CGSize(width: ScreenSize.width, height: ScreenSize.height == 568 ? ScreenSize.height+60 : ScreenSize.height)
     contentView.frame = CGRect(x: 0, y: 0, width: ScreenSize.width, height: ScreenSize.height+100)
+    scrollView.showsVerticalScrollIndicator = false
     view.addSubview(scrollView)
     scrollView.addSubview(contentView)
   }
