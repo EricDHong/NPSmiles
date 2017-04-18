@@ -13,15 +13,8 @@ class ContactView: UIViewController {
   
   private var viewsDictionary:[String:Any]?
   
-  var scrollView = UIScrollView()
-  var contentView = UIView()
-  
-  private func setupScrollView() {
-    scrollView.contentSize = CGSize(width: ScreenSize.width, height: ScreenSize.height == 568 ? ScreenSize.height+60 : ScreenSize.height)
-    contentView.frame = CGRect(x: 0, y: 0, width: ScreenSize.width, height: ScreenSize.height+100)
-    view.addSubview(scrollView)
-    scrollView.addSubview(contentView)
-  }
+  private var scrollView = UIScrollView()
+  private var contentView = UIView()
   
   internal let legalNameLabel:UILabel = {
     let label = UILabel()
@@ -75,6 +68,16 @@ class ContactView: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationItem.title = "Contact Info"
+    let font = UIFont.systemFont(ofSize: 25.0, weight: UIFontWeightThin)
+    self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : font,
+                                                                    NSForegroundColorAttributeName : ColorScheme.primaryColor]
+  }
+  
+  private func setupScrollView() {
+    scrollView.contentSize = CGSize(width: ScreenSize.width, height: ScreenSize.height == 568 ? ScreenSize.height+60 : ScreenSize.height)
+    contentView.frame = CGRect(x: 0, y: 0, width: ScreenSize.width, height: ScreenSize.height+100)
+    view.addSubview(scrollView)
+    scrollView.addSubview(contentView)
   }
   
   private func addSubviewsToContentView() {
