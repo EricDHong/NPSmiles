@@ -18,8 +18,7 @@ struct NorthPotomacSmiles {
   static let faxNumber = "301.926.4405"
   static let address = "15200 Shady Grove Rd, #408"
   static let cityState = "Rockville, MD"
-  static let daysOfWeek = "Monday:\nTuesday:\nWednesday:\nThursday:\nFriday:\nSat & Sun"
-  static let officeHourTime = "8:30am-5pm\n8:30am-5pm\n8:30am-5pm\n8:30am-5pm\n7:30am-3pm\nCLOSED"
+  static let officeHours = "monday: 8:30am-5pm\ntuesday: 8:30am-5pm\nwednesday: 8:30am-5pm\nthursday: 8:30am-5pm\nfriday: 7:30am-3pm\nsat & sun: CLOSED       "
   
   static let finalTextArray = [NorthPotomacSmiles.email,
                                NorthPotomacSmiles.telephoneText,
