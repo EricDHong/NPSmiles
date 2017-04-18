@@ -16,6 +16,7 @@
 		1A1CA8961EA20A82001A3192 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1CA8951EA20A82001A3192 /* ContactViewController.swift */; };
 		1A41D2E01EA4623F0085FE7F /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41D2DF1EA4623F0085FE7F /* ScreenSize.swift */; };
 		1A5CD8D51EA274D7000C9465 /* NorthPotomacSmiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5CD8D41EA274D7000C9465 /* NorthPotomacSmiles.swift */; };
+		1A804DBE1EA5B80100C9E69F /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804DBD1EA5B80100C9E69F /* FeedCell.swift */; };
 		9F616DE24CF01F8730394E0C /* libPods-NPSmiles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA10DD7405F5EFA2B63CC75A /* libPods-NPSmiles.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		1A1CA8951EA20A82001A3192 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		1A41D2DF1EA4623F0085FE7F /* ScreenSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
 		1A5CD8D41EA274D7000C9465 /* NorthPotomacSmiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NorthPotomacSmiles.swift; sourceTree = "<group>"; };
+		1A804DBD1EA5B80100C9E69F /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		6F746F664CDB1606E9C17027 /* Pods-NPSmiles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPSmiles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NPSmiles/Pods-NPSmiles.debug.xcconfig"; sourceTree = "<group>"; };
 		BA10DD7405F5EFA2B63CC75A /* libPods-NPSmiles.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NPSmiles.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 			children = (
 				1A1CA8911EA20582001A3192 /* Launch Screen.storyboard */,
 				1A1CA88F1EA20408001A3192 /* NewsFeedView.swift */,
+				1A804DBD1EA5B80100C9E69F /* FeedCell.swift */,
 				1A1CA8931EA20A77001A3192 /* ContactView.swift */,
 			);
 			path = Views;
@@ -260,6 +263,7 @@
 				1A1CA88E1EA203F3001A3192 /* NewsFeedViewController.swift in Sources */,
 				1A1CA8941EA20A77001A3192 /* ContactView.swift in Sources */,
 				1A41D2E01EA4623F0085FE7F /* ScreenSize.swift in Sources */,
+				1A804DBE1EA5B80100C9E69F /* FeedCell.swift in Sources */,
 				1A5CD8D51EA274D7000C9465 /* NorthPotomacSmiles.swift in Sources */,
 				1A1CA8961EA20A82001A3192 /* ContactViewController.swift in Sources */,
 			);

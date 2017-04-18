@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class ContactViewController: ContactView {
   
@@ -16,14 +17,14 @@ class ContactViewController: ContactView {
     super.viewDidLoad()
     legalNameLabel.text = NorthPotomacSmiles.legalName
     setTextOfContactTextView()
-    addressButton.setTitle("\(NorthPotomacSmiles.address) Rockville, MD", for: .normal)
-    daysOfTheWeekTextView.text = NorthPotomacSmiles.daysOfWeek
-    officeHoursTimeTextView.text = NorthPotomacSmiles.officeHourTime
+    addressButton.setTitle("\(NorthPotomacSmiles.address)", for: .normal)
+    officeHoursTextView.text = "OFFICE HOURS:\n\(NorthPotomacSmiles.officeHours)"
+    addMarker(to: googleMapView)
   }
   
   func setTextOfContactTextView() {
-    let nonlinkAttributes = makeAttribute(withSize: 20.0, ofColor: .black)
-    let linkAttributes = makeAttribute(withSize: 20.0, ofColor: .blue)
+    let nonlinkAttributes = makeAttribute(withSize: 22.0, ofColor: .black)
+    let linkAttributes = makeAttribute(withSize: 21.5, ofColor: .blue)
     for index in 0..<NorthPotomacSmiles.finalTextArray.count {
       attributeText(of: NorthPotomacSmiles.finalTextArray[index], with: (index % 2 == 0) ? linkAttributes : nonlinkAttributes)
     }
@@ -49,6 +50,15 @@ class ContactViewController: ContactView {
   
   func openAddress() {
     UIApplication.shared.open(URL(string:"https://www.google.com/maps/place/North+Potomac+Smiles/@39.1046951,-77.1934817,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7cd544377fb59:0x72b1526f4e688fa3!8m2!3d39.104691!4d-77.191293")!)
+  }
+  
+  private func addMarker(to mapView: GMSMapView) {
+    let marker = GMSMarker()
+    marker.position = CLLocationCoordinate2D(latitude: 39.104729, longitude: -77.191294)
+    marker.title = "\(NorthPotomacSmiles.legalName)"
+    marker.snippet = NorthPotomacSmiles.cityState
+    marker.map = mapView
+    mapView.selectedMarker = marker
   }
 
 }
