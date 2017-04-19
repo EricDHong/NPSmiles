@@ -27,7 +27,7 @@ class ContactViewController: ContactView {
   
   private func attributeContactInfoText() {
     let nonlinkAttributes = makeAttribute(withSize: 22.0, ofColor: .black)
-    let linkAttributes = makeAttribute(withSize: 21.5, ofColor: ColorScheme.secondaryColor)
+    let linkAttributes = makeAttribute(withSize: 21.5, ofColor: ColorScheme.primaryColor)
     for index in 0..<NorthPotomacSmiles.contactInfoText.count {
       let attributes = (index % 2 == 0) ? nonlinkAttributes : linkAttributes
       appendAttributeText(of: NorthPotomacSmiles.contactInfoText[index],

@@ -35,7 +35,7 @@ class ContactView: UIViewController {
   
   internal let addressButton:UIButton = {
     let button = UIButton(type: .custom)
-    button.setTitleColor(.blue, for: .normal)
+    button.setTitleColor(ColorScheme.primaryColor, for: .normal)
     button.addTarget(self, action: #selector(ContactViewController.openAddress), for: .touchUpInside)
     button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
     return button
