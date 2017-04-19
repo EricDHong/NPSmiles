@@ -14,7 +14,6 @@
 		1A1CA8921EA20582001A3192 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1CA8911EA20582001A3192 /* Launch Screen.storyboard */; };
 		1A1CA8941EA20A77001A3192 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1CA8931EA20A77001A3192 /* ContactView.swift */; };
 		1A1CA8961EA20A82001A3192 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1CA8951EA20A82001A3192 /* ContactViewController.swift */; };
-		1A41D2E01EA4623F0085FE7F /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41D2DF1EA4623F0085FE7F /* ScreenSize.swift */; };
 		1A5CD8D51EA274D7000C9465 /* NorthPotomacSmiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5CD8D41EA274D7000C9465 /* NorthPotomacSmiles.swift */; };
 		1A804DBE1EA5B80100C9E69F /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804DBD1EA5B80100C9E69F /* FeedCell.swift */; };
 		1A804DC01EA5CC4700C9E69F /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804DBF1EA5CC4700C9E69F /* ColorScheme.swift */; };
@@ -32,7 +31,6 @@
 		1A1CA8911EA20582001A3192 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		1A1CA8931EA20A77001A3192 /* ContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		1A1CA8951EA20A82001A3192 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
-		1A41D2DF1EA4623F0085FE7F /* ScreenSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
 		1A5CD8D41EA274D7000C9465 /* NorthPotomacSmiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NorthPotomacSmiles.swift; sourceTree = "<group>"; };
 		1A804DBD1EA5B80100C9E69F /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		1A804DBF1EA5CC4700C9E69F /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 		1A1CA88B1EA1FFF6001A3192 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1A41D2DF1EA4623F0085FE7F /* ScreenSize.swift */,
 				1A5CD8D41EA274D7000C9465 /* NorthPotomacSmiles.swift */,
 				1A804DBF1EA5CC4700C9E69F /* ColorScheme.swift */,
 			);
@@ -266,7 +263,6 @@
 				1A1CA8781EA1FFC9001A3192 /* AppDelegate.swift in Sources */,
 				1A1CA88E1EA203F3001A3192 /* NewsFeedViewController.swift in Sources */,
 				1A1CA8941EA20A77001A3192 /* ContactView.swift in Sources */,
-				1A41D2E01EA4623F0085FE7F /* ScreenSize.swift in Sources */,
 				1A804DBE1EA5B80100C9E69F /* FeedCell.swift in Sources */,
 				1A5CD8D51EA274D7000C9465 /* NorthPotomacSmiles.swift in Sources */,
 				1A1CA8961EA20A82001A3192 /* ContactViewController.swift in Sources */,
