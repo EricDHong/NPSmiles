@@ -37,7 +37,7 @@ class ContactViewController: ContactView {
     contactInfoTextView.attributedText = attributedContactInfoText
   }
   
-  func makeAttribute(withSize size:CGFloat,ofColor textColor:UIColor) -> [String:Any] {
+  private func makeAttribute(withSize size:CGFloat,ofColor textColor:UIColor) -> [String:Any] {
     let fontAttribute = UIFont.systemFont(ofSize: size, weight: UIFontWeightLight)
     let style = NSMutableParagraphStyle()
     style.alignment = .right
@@ -45,12 +45,6 @@ class ContactViewController: ContactView {
                                        NSFontAttributeName : fontAttribute,
                                        NSParagraphStyleAttributeName : style]
     return customAttribute
-  }
-  
-  func appendAttributeText(of text:String,with attributes:[String:Any],to attrText: NSMutableAttributedString) {
-    let textToAttribute = NSMutableAttributedString(string: text)
-    textToAttribute.addAttributes(attributes, range: NSRange(0..<text.characters.count))
-    attrText.append(textToAttribute)
   }
   
   func openAddress() { UIApplication.shared.open(URL(string:"https://goo.gl/maps/zZD917111AJ2")!) }

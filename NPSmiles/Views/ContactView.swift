@@ -11,8 +11,10 @@ import GoogleMaps
 
 class ContactView: UIViewController {
   
+  //MARK: Instance Vars
   private var viewsDictionary:[String:Any]?
   
+  //MARK: Views
   private var scrollView = UIScrollView()
   private var contentView = UIView()
   
@@ -60,6 +62,7 @@ class ContactView: UIViewController {
     setupConstraints()
   }
   
+  //MARK: Setup views
   private func setupNavigationBar() {
     self.navigationItem.title = "Contact Info"
     let font = UIFont.systemFont(ofSize: 25.0, weight: UIFontWeightThin)
@@ -83,6 +86,7 @@ class ContactView: UIViewController {
     for viewObject in views { contentView.addSubview(viewObject) }
   }
   
+  //MARK: Constraints
   private func disableAutoresizingMaskIntoConstraints() {
     scrollView.translatesAutoresizingMaskIntoConstraints = false
     contactInfoTextView.translatesAutoresizingMaskIntoConstraints = false
@@ -110,6 +114,13 @@ class ContactView: UIViewController {
                           to: self.view,
                           of:viewsDictionary!)
 
+  }
+  
+  // MARK: Format Text
+  internal func appendAttributeText(of text:String,with attributes:[String:Any],to attrText: NSMutableAttributedString) {
+    let textToAttribute = NSMutableAttributedString(string: text)
+    textToAttribute.addAttributes(attributes, range: NSRange(0..<text.characters.count))
+    attrText.append(textToAttribute)
   }
 }
 
