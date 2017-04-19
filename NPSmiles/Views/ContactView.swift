@@ -112,6 +112,20 @@ class ContactView: UIViewController {
   }
   
   // MARK: Format Text
+  internal var nonlinkAttributes: [String:Any] {
+    get { return makeAttribute(withSize: 22.0,
+                               weight: UIFontWeightLight,
+                               ofColor: .black,
+                               textAlignment: .right) }
+  }
+  
+  internal var linkAttributes: [String:Any] {
+    get { return makeAttribute(withSize: 21.5,
+                               weight: UIFontWeightLight,
+                               ofColor: ColorScheme.primaryColor,
+                               textAlignment: .right) }
+  }
+  
   internal func appendAttributeText(of text:String,with attributes:[String:Any],to attrText: NSMutableAttributedString) {
     let textToAttribute = NSMutableAttributedString(string: text)
     textToAttribute.addAttributes(attributes, range: NSRange(0..<text.characters.count))
@@ -126,5 +140,18 @@ extension UIViewController {
                                                              metrics: nil,
                                                                views: dictionaryViews)
     view.addConstraints(constraint)
+  }
+  
+  func makeAttribute(withSize size:CGFloat,
+                     weight: CGFloat,
+                     ofColor textColor:UIColor,
+                     textAlignment:NSTextAlignment) -> [String:Any] {
+    let fontAttribute = UIFont.systemFont(ofSize: size, weight: UIFontWeightLight)
+    let style = NSMutableParagraphStyle()
+    style.alignment = .right
+    let customAttribute = [ NSForegroundColorAttributeName : textColor,
+                            NSFontAttributeName : fontAttribute,
+                            NSParagraphStyleAttributeName : style]
+    return customAttribute
   }
 }
