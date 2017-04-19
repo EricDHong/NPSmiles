@@ -10,6 +10,12 @@ import UIKit
 
 class FeedCell: UICollectionViewCell {
   
+  var imageView: UIImageView = {
+    let imageView = UIImageView()
+    
+    return imageView
+  }()
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     

@@ -11,23 +11,30 @@ import GoogleMaps
 
 class ContactViewController: ContactView {
   
-  let finalAttributedText = NSMutableAttributedString()
+  let attributedContactInfoText = NSMutableAttributedString()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    officeHoursTextView.text = "OFFICE HOURS:\n\(NorthPotomacSmiles.officeHours)"
-    addressButton.setTitle("\(NorthPotomacSmiles.address)", for: .normal)
-    setTextOfContactTextView()
-    addMarker(to: googleMapView)
+    setupViewsText()
+    setupMapMarker()
   }
   
-  func setTextOfContactTextView() {
+  private func setupViewsText() {
+    officeHoursTextView.text = "OFFICE HOURS:\n\(NorthPotomacSmiles.officeHours)"
+    addressButton.setTitle("\(NorthPotomacSmiles.address)", for: .normal)
+    attributeContactInfoText()
+  }
+  
+  private func attributeContactInfoText() {
     let nonlinkAttributes = makeAttribute(withSize: 22.0, ofColor: .black)
-    let linkAttributes = makeAttribute(withSize: 21.5, ofColor: .blue)
-    for index in 0..<NorthPotomacSmiles.finalTextArray.count {
-      attributeText(of: NorthPotomacSmiles.finalTextArray[index], with: (index % 2 == 0) ? nonlinkAttributes : linkAttributes)
+    let linkAttributes = makeAttribute(withSize: 21.5, ofColor: ColorScheme.secondaryColor)
+    for index in 0..<NorthPotomacSmiles.contactInfoText.count {
+      let attributes = (index % 2 == 0) ? nonlinkAttributes : linkAttributes
+      appendAttributeText(of: NorthPotomacSmiles.contactInfoText[index],
+                          with: attributes,
+                          to: attributedContactInfoText)
     }
-    contactInfoTextView.attributedText = finalAttributedText
+    contactInfoTextView.attributedText = attributedContactInfoText
   }
   
   func makeAttribute(withSize size:CGFloat,ofColor textColor:UIColor) -> [String:Any] {
@@ -40,24 +47,22 @@ class ContactViewController: ContactView {
     return customAttribute
   }
   
-  func attributeText(of text:String,with attributes:[String:Any]) {
-    let text = text
-    let attrText = NSMutableAttributedString(string: text)
-    attrText.addAttributes(attributes, range: NSRange(0..<text.characters.count))
-    finalAttributedText.append(attrText)
+  func appendAttributeText(of text:String,with attributes:[String:Any],to attrText: NSMutableAttributedString) {
+    let textToAttribute = NSMutableAttributedString(string: text)
+    textToAttribute.addAttributes(attributes, range: NSRange(0..<text.characters.count))
+    attrText.append(textToAttribute)
   }
   
-  func openAddress() {
-    UIApplication.shared.open(URL(string:"https://www.google.com/maps/place/North+Potomac+Smiles/@39.1046951,-77.1934817,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7cd544377fb59:0x72b1526f4e688fa3!8m2!3d39.104691!4d-77.191293")!)
-  }
+  func openAddress() { UIApplication.shared.open(URL(string:"https://goo.gl/maps/zZD917111AJ2")!) }
   
-  private func addMarker(to mapView: GMSMapView) {
+  private func setupMapMarker() {
     let marker = GMSMarker()
-    marker.position = CLLocationCoordinate2D(latitude: 39.104729, longitude: -77.191294)
+    marker.position = CLLocationCoordinate2D(latitude: NorthPotomacSmiles.latitude,
+                                             longitude: NorthPotomacSmiles.longitude)
     marker.title = "\(NorthPotomacSmiles.legalName)"
     marker.snippet = NorthPotomacSmiles.cityState
-    marker.map = mapView
-    mapView.selectedMarker = marker
+    marker.map = googleMapView
+    googleMapView.selectedMarker = marker
   }
 
 }

@@ -54,35 +54,33 @@ class ContactView: UIViewController {
   
   override func loadView() {
     super.loadView()
-    setupScrollView()
+    setupNavigationBar()
+    setupScrollView(with: contentView)
     addSubviewsToContentView()
     setupConstraints()
   }
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  
+  private func setupNavigationBar() {
     self.navigationItem.title = "Contact Info"
     let font = UIFont.systemFont(ofSize: 25.0, weight: UIFontWeightThin)
-    self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : font,
-                                                                    NSForegroundColorAttributeName : ColorScheme.primaryColor]
+    let attributes = [NSFontAttributeName : font,
+                      NSForegroundColorAttributeName : ColorScheme.primaryColor]
+    self.navigationController?.navigationBar.titleTextAttributes = attributes
   }
   
-  private func setupScrollView() {
-    scrollView.contentSize = CGSize(width: ScreenSize.width, height: ScreenSize.height == 568 ? ScreenSize.height+60 : ScreenSize.height)
-    contentView.frame = CGRect(x: 0, y: 0, width: ScreenSize.width, height: ScreenSize.height+100)
+  private func setupScrollView(with containerView:UIView) {
+    let iphone5Height: CGFloat = 568
+    let contentSizeHeight = ScreenSize.height == iphone5Height ? ScreenSize.height+60 : ScreenSize.height
+    scrollView.contentSize = CGSize(width: ScreenSize.width, height: contentSizeHeight)
     scrollView.showsVerticalScrollIndicator = false
     view.addSubview(scrollView)
-    scrollView.addSubview(contentView)
+    containerView.frame = CGRect(x: 0, y: 0, width: ScreenSize.width, height: ScreenSize.height+100)
+    scrollView.addSubview(containerView)
   }
   
   private func addSubviewsToContentView() {
-    let views = [contactInfoTextView,
-                 googleMapView,
-                 addressButton,
-                 officeHoursTextView]
-    for viewObject in views {
-      contentView.addSubview(viewObject)
-    }
+    let views = [contactInfoTextView, googleMapView, addressButton, officeHoursTextView]
+    for viewObject in views { contentView.addSubview(viewObject) }
   }
   
   private func disableAutoresizingMaskIntoConstraints() {
