@@ -11,9 +11,6 @@ import GoogleMaps
 
 class ContactView: UIViewController {
   
-  //MARK: Instance Vars
-  private var viewsDictionary:[String:Any]?
-  
   //MARK: Views
   private var scrollView = UIScrollView()
   private var contentView = UIView()
@@ -97,22 +94,20 @@ class ContactView: UIViewController {
   
   private func setupConstraints() {
     disableAutoresizingMaskIntoConstraints()
-    viewsDictionary = ["v0":scrollView,
-                       "v1":contactInfoTextView,
-                       "v2":googleMapView,
-                       "v3":addressButton,
-                       "v4":officeHoursTextView] as [String:Any]
     
-    configureConstraint(with: "H:|[v0]|", to: view, of: viewsDictionary!)
-    configureConstraint(with: "V:|[v0]|", to: view, of: viewsDictionary!)
+    configureConstraint(with: "H:|[v0]|", to: view, of: ["v0" : scrollView])
+    configureConstraint(with: "V:|[v0]|", to: view, of: ["v0" : scrollView])
+    configureConstraint(with: "H:|-8-[v1]-8-|", to: contentView, of:["v1" : contactInfoTextView])
+    configureConstraint(with: "H:|-8-[v2]-8-|", to: contentView, of:["v2" : googleMapView])
+    configureConstraint(with: "H:|-8-[v3]-8-|", to: contentView, of:["v3" : addressButton])
+    configureConstraint(with: "H:|-8-[v4]-8-|", to: contentView, of:["v4" : officeHoursTextView])
     
-    configureConstraint(with: "H:|-8-[v1]-8-|", to: contentView, of:viewsDictionary!)
-    configureConstraint(with: "H:|-8-[v2]-8-|", to: contentView, of:viewsDictionary!)
-    configureConstraint(with: "H:|-8-[v3]-8-|", to: contentView, of:viewsDictionary!)
-    configureConstraint(with: "H:|-8-[v4]-8-|", to: contentView, of:viewsDictionary!)
-    configureConstraint(with: "V:|[v1(130)][v2(175)]-2-[v3(40)][v4]|",
-                          to: self.view,
-                          of:viewsDictionary!)
+    let viewsDictionary = ["v0":scrollView,
+                           "v1":contactInfoTextView,
+                           "v2":googleMapView,
+                           "v3":addressButton,
+                           "v4":officeHoursTextView] as [String:Any]
+    configureConstraint(with: "V:|[v1(130)][v2(175)]-2-[v3(40)][v4]|", to: self.view, of:viewsDictionary)
 
   }
   
