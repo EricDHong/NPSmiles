@@ -20,6 +20,8 @@
 		1AA0C2931EA847CC00D97361 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0C2921EA847CC00D97361 /* StateController.swift */; };
 		1AA0C2961EA8499100D97361 /* NewsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0C2951EA8499100D97361 /* NewsItemCell.swift */; };
 		1AA0C2981EA84A5400D97361 /* NewsItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0C2971EA84A5400D97361 /* NewsItemCellView.swift */; };
+		1ABF48B91EA9520F008DD9F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF48B81EA9520F008DD9F6 /* LoginViewController.swift */; };
+		1ABF48BB1EA9523F008DD9F6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF48BA1EA9523F008DD9F6 /* LoginView.swift */; };
 		9F616DE24CF01F8730394E0C /* libPods-NPSmiles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA10DD7405F5EFA2B63CC75A /* libPods-NPSmiles.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		1AA0C2921EA847CC00D97361 /* StateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		1AA0C2951EA8499100D97361 /* NewsItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItemCell.swift; sourceTree = "<group>"; };
 		1AA0C2971EA84A5400D97361 /* NewsItemCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItemCellView.swift; sourceTree = "<group>"; };
+		1ABF48B81EA9520F008DD9F6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1ABF48BA1EA9523F008DD9F6 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6F746F664CDB1606E9C17027 /* Pods-NPSmiles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPSmiles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NPSmiles/Pods-NPSmiles.debug.xcconfig"; sourceTree = "<group>"; };
 		BA10DD7405F5EFA2B63CC75A /* libPods-NPSmiles.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NPSmiles.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1A1CA8911EA20582001A3192 /* Launch Screen.storyboard */,
+				1ABF48BA1EA9523F008DD9F6 /* LoginView.swift */,
 				1A1CA88F1EA20408001A3192 /* NewsFeedView.swift */,
 				1AA0C2971EA84A5400D97361 /* NewsItemCellView.swift */,
 				1A1CA8931EA20A77001A3192 /* ContactView.swift */,
@@ -101,6 +106,7 @@
 		1A1CA88A1EA1FFEF001A3192 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1ABF48B81EA9520F008DD9F6 /* LoginViewController.swift */,
 				1A1CA88D1EA203F3001A3192 /* NewsFeedViewController.swift */,
 				1A1CA8951EA20A82001A3192 /* ContactViewController.swift */,
 			);
@@ -275,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ABF48B91EA9520F008DD9F6 /* LoginViewController.swift in Sources */,
 				1A1CA8901EA20408001A3192 /* NewsFeedView.swift in Sources */,
 				1A804DC01EA5CC4700C9E69F /* ColorScheme.swift in Sources */,
 				1A1CA8781EA1FFC9001A3192 /* AppDelegate.swift in Sources */,
@@ -284,6 +291,7 @@
 				1AA0C2961EA8499100D97361 /* NewsItemCell.swift in Sources */,
 				1A5CD8D51EA274D7000C9465 /* NorthPotomacSmiles.swift in Sources */,
 				1AA0C2911EA8459200D97361 /* NewsItem.swift in Sources */,
+				1ABF48BB1EA9523F008DD9F6 /* LoginView.swift in Sources */,
 				1A1CA8961EA20A82001A3192 /* ContactViewController.swift in Sources */,
 				1AA0C2931EA847CC00D97361 /* StateController.swift in Sources */,
 			);
