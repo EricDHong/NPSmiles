@@ -22,8 +22,8 @@ class NewsFeedViewController: NewsFeedView, UICollectionViewDataSource, UICollec
   
   func collectionView(_ collectionView: UICollectionView,
                       cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! NewsItemCell
-    cell.backgroundColor = .yellow
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsItemCell.identifier,
+                                                                  for: indexPath) as! NewsItemCell
     return cell
   }
   

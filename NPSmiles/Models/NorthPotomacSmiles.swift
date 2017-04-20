@@ -21,7 +21,7 @@ struct NorthPotomacSmiles {
   static let latitude = 39.104729
   static let longitude = -77.191294
   
-  static let feedImage = "feedImage"
+  static let newsItemImageIcon = "newsItemImageIcon"
   
   static let contactInfoText = ["\(NorthPotomacSmiles.legalName)\n",
                                NorthPotomacSmiles.email,
