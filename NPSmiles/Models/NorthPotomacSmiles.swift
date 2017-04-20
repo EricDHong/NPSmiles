@@ -21,16 +21,13 @@ struct NorthPotomacSmiles {
   static let latitude = 39.104729
   static let longitude = -77.191294
   
-  static let telephoneText = "\nTelephone: "
-  static let faxText = "\n             Fax: "
-  
   static let feedImage = "feedImage"
   
   static let contactInfoText = ["\(NorthPotomacSmiles.legalName)\n",
                                NorthPotomacSmiles.email,
-                               NorthPotomacSmiles.telephoneText,
+                               "\nTelephone: ",
                                NorthPotomacSmiles.phoneNumber,
-                               NorthPotomacSmiles.faxText,
+                               "\n             Fax: ",
                                NorthPotomacSmiles.faxNumber]
   
   static func openAddressUrl() {

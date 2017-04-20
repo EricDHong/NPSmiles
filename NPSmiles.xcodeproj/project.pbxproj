@@ -15,8 +15,11 @@
 		1A1CA8941EA20A77001A3192 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1CA8931EA20A77001A3192 /* ContactView.swift */; };
 		1A1CA8961EA20A82001A3192 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1CA8951EA20A82001A3192 /* ContactViewController.swift */; };
 		1A5CD8D51EA274D7000C9465 /* NorthPotomacSmiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5CD8D41EA274D7000C9465 /* NorthPotomacSmiles.swift */; };
-		1A804DBE1EA5B80100C9E69F /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804DBD1EA5B80100C9E69F /* FeedCell.swift */; };
 		1A804DC01EA5CC4700C9E69F /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804DBF1EA5CC4700C9E69F /* ColorScheme.swift */; };
+		1AA0C2911EA8459200D97361 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0C2901EA8459200D97361 /* NewsItem.swift */; };
+		1AA0C2931EA847CC00D97361 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0C2921EA847CC00D97361 /* StateController.swift */; };
+		1AA0C2961EA8499100D97361 /* NewsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0C2951EA8499100D97361 /* NewsItemCell.swift */; };
+		1AA0C2981EA84A5400D97361 /* NewsItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0C2971EA84A5400D97361 /* NewsItemCellView.swift */; };
 		9F616DE24CF01F8730394E0C /* libPods-NPSmiles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA10DD7405F5EFA2B63CC75A /* libPods-NPSmiles.a */; };
 /* End PBXBuildFile section */
 
@@ -32,8 +35,11 @@
 		1A1CA8931EA20A77001A3192 /* ContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		1A1CA8951EA20A82001A3192 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		1A5CD8D41EA274D7000C9465 /* NorthPotomacSmiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NorthPotomacSmiles.swift; sourceTree = "<group>"; };
-		1A804DBD1EA5B80100C9E69F /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		1A804DBF1EA5CC4700C9E69F /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		1AA0C2901EA8459200D97361 /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		1AA0C2921EA847CC00D97361 /* StateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
+		1AA0C2951EA8499100D97361 /* NewsItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItemCell.swift; sourceTree = "<group>"; };
+		1AA0C2971EA84A5400D97361 /* NewsItemCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItemCellView.swift; sourceTree = "<group>"; };
 		6F746F664CDB1606E9C17027 /* Pods-NPSmiles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPSmiles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NPSmiles/Pods-NPSmiles.debug.xcconfig"; sourceTree = "<group>"; };
 		BA10DD7405F5EFA2B63CC75A /* libPods-NPSmiles.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NPSmiles.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,7 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				1A1CA88B1EA1FFF6001A3192 /* Models */,
-				1A1CA88A1EA1FFEF001A3192 /* Controllers */,
+				1AA0C2941EA847D100D97361 /* Model Controllers */,
+				1A1CA88A1EA1FFEF001A3192 /* View Controllers */,
 				1A1CA8891EA1FFE7001A3192 /* Views */,
 				1A1CA88C1EA1FFFC001A3192 /* Supporting Files */,
 				1A1CA87E1EA1FFC9001A3192 /* Assets.xcassets */,
@@ -85,19 +92,19 @@
 			children = (
 				1A1CA8911EA20582001A3192 /* Launch Screen.storyboard */,
 				1A1CA88F1EA20408001A3192 /* NewsFeedView.swift */,
-				1A804DBD1EA5B80100C9E69F /* FeedCell.swift */,
+				1AA0C2971EA84A5400D97361 /* NewsItemCellView.swift */,
 				1A1CA8931EA20A77001A3192 /* ContactView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		1A1CA88A1EA1FFEF001A3192 /* Controllers */ = {
+		1A1CA88A1EA1FFEF001A3192 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				1A1CA88D1EA203F3001A3192 /* NewsFeedViewController.swift */,
 				1A1CA8951EA20A82001A3192 /* ContactViewController.swift */,
 			);
-			path = Controllers;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		1A1CA88B1EA1FFF6001A3192 /* Models */ = {
@@ -105,6 +112,7 @@
 			children = (
 				1A5CD8D41EA274D7000C9465 /* NorthPotomacSmiles.swift */,
 				1A804DBF1EA5CC4700C9E69F /* ColorScheme.swift */,
+				1AA0C2901EA8459200D97361 /* NewsItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,6 +124,15 @@
 				1A1CA8831EA1FFC9001A3192 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1AA0C2941EA847D100D97361 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AA0C2921EA847CC00D97361 /* StateController.swift */,
+				1AA0C2951EA8499100D97361 /* NewsItemCell.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 		8130C5B4BDA0BA394D1402A0 /* Pods */ = {
@@ -262,10 +279,13 @@
 				1A804DC01EA5CC4700C9E69F /* ColorScheme.swift in Sources */,
 				1A1CA8781EA1FFC9001A3192 /* AppDelegate.swift in Sources */,
 				1A1CA88E1EA203F3001A3192 /* NewsFeedViewController.swift in Sources */,
+				1AA0C2981EA84A5400D97361 /* NewsItemCellView.swift in Sources */,
 				1A1CA8941EA20A77001A3192 /* ContactView.swift in Sources */,
-				1A804DBE1EA5B80100C9E69F /* FeedCell.swift in Sources */,
+				1AA0C2961EA8499100D97361 /* NewsItemCell.swift in Sources */,
 				1A5CD8D51EA274D7000C9465 /* NorthPotomacSmiles.swift in Sources */,
+				1AA0C2911EA8459200D97361 /* NewsItem.swift in Sources */,
 				1A1CA8961EA20A82001A3192 /* ContactViewController.swift in Sources */,
+				1AA0C2931EA847CC00D97361 /* StateController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -108,22 +108,15 @@ class ContactView: UIViewController {
                            "v3":addressButton,
                            "v4":officeHoursTextView] as [String:Any]
     configureConstraint(with: "V:|[v1(130)][v2(175)]-2-[v3(40)][v4]|", to: self.view, of:viewsDictionary)
-
   }
   
   // MARK: Format Text
   internal var nonlinkAttributes: [String:Any] {
-    get { return makeAttribute(withSize: 22.0,
-                               weight: UIFontWeightLight,
-                               ofColor: .black,
-                               textAlignment: .right) }
+    get { return makeAttribute(withSize: 22.0, weight: UIFontWeightLight, ofColor: .black, textAlignment: .right) }
   }
   
   internal var linkAttributes: [String:Any] {
-    get { return makeAttribute(withSize: 21.5,
-                               weight: UIFontWeightLight,
-                               ofColor: ColorScheme.primaryColor,
-                               textAlignment: .right) }
+    get { return makeAttribute(withSize: 21.5, weight: UIFontWeightLight, ofColor: ColorScheme.primaryColor, textAlignment: .right) }
   }
   
   internal func appendAttributeText(of text:String,with attributes:[String:Any],to attrText: NSMutableAttributedString) {
