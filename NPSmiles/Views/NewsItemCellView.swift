@@ -55,8 +55,8 @@ class NewsItemCellView: UICollectionViewCell {
     disableAutresizingMaskIntoConstraints()
     let viewsDictionary = ["v0" : newsItemImageView, "v1" : headerTextLabel, "v2" : bodyTextView]
     
-    configureConstraint(with: "H:|-4-[v0(50)]-4-[v1]-4-|", to: self, of: viewsDictionary)
-    configureConstraint(with: "H:|-4-[v2]-4-|", to: self, of: viewsDictionary)
+    configureConstraint(with: "H:|-8-[v0(50)]-4-[v1]-8-|", to: self, of: viewsDictionary)
+    configureConstraint(with: "H:|-8-[v2]-8-|", to: self, of: viewsDictionary)
     configureConstraint(with: "V:|-4-[v0(50)]-2-[v2]-4-|", to: self, of: viewsDictionary)
     configureConstraint(with: "V:|-4-[v1(50)]-2-[v2]-4-|", to: self, of: viewsDictionary)
   }

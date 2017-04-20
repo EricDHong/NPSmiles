@@ -30,6 +30,7 @@ class NewsFeedView: UIViewController {
     newsFeed = UICollectionView(frame: view.bounds, collectionViewLayout: flowLayout)
     flowLayout.minimumLineSpacing = 1.0
     newsFeed?.register(NewsItemCell.self, forCellWithReuseIdentifier: NewsItemCell.identifier)
+    newsFeed?.backgroundColor = .white
     view.addSubview(newsFeed!)
     newsFeed?.translatesAutoresizingMaskIntoConstraints = false
     configureConstraint(with: "H:|[v0]|", to: view, of: ["v0":newsFeed!])
