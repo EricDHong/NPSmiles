@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let newsFeedVC = navControllerEmbeded(with:NewsFeedViewController())
     let contactVC = navControllerEmbeded(with:ContactViewController())
     tabBarController.viewControllers = [newsFeedVC,contactVC]
-    setTabBarItemName(atIndex: 0, with: "Feed")
+    setTabBarItemName(atIndex: 0, with: "News")
     setTabBarItemName(atIndex: 1, with: "Contact")
   }
   

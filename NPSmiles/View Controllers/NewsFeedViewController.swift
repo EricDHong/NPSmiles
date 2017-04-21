@@ -31,7 +31,7 @@ class NewsFeedViewController: NewsFeedView, UICollectionViewDataSource, UICollec
                       layout collectionViewLayout: UICollectionViewLayout,
                       sizeForItemAt indexPath: IndexPath) -> CGSize {
     let newsFeedSize = newsFeed?.bounds.size
-    return CGSize(width: newsFeedSize!.width, height: 150)
+    return CGSize(width: newsFeedSize!.width, height: 175)
   }
 
 }

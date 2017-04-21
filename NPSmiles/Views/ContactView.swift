@@ -13,10 +13,15 @@ class ContactView: UIViewController {
   
   //MARK: Views
   private var scrollView = UIScrollView()
-  private var contentView = UIView()
+  private var contentView: UIView = {
+    let view = UIView()
+    view.backgroundColor = .white
+    return view
+  }()
   
   internal let contactInfoTextView: UITextView = {
     let textView = UITextView()
+    textView.backgroundColor = .white
     textView.textAlignment = .center
     textView.dataDetectorTypes = .all
     textView.isEditable = false
@@ -34,7 +39,7 @@ class ContactView: UIViewController {
   
   internal let addressButton:UIButton = {
     let button = UIButton(type: .custom)
-    button.setTitleColor(ColorScheme.primaryColor, for: .normal)
+    button.setTitleColor(ColorScheme.primary, for: .normal)
     button.addTarget(self, action: #selector(ContactViewController.openAddress), for: .touchUpInside)
     button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
     return button
@@ -42,9 +47,10 @@ class ContactView: UIViewController {
   
   internal var officeHoursTextView:UITextView = {
     let textView = UITextView()
+    textView.backgroundColor = .white
     textView.font = UIFont.systemFont(ofSize: 24.0, weight: UIFontWeightLight)
     textView.textAlignment = .right
-    textView.textColor = .black
+    textView.textColor = ColorScheme.darkGrey
     textView.isEditable = false
     textView.isSelectable = false
     textView.isScrollEnabled = false
@@ -64,7 +70,7 @@ class ContactView: UIViewController {
     self.navigationItem.title = "Contact Info"
     let font = UIFont.systemFont(ofSize: 25.0, weight: UIFontWeightThin)
     let attributes = [NSFontAttributeName : font,
-                      NSForegroundColorAttributeName : ColorScheme.primaryColor]
+                      NSForegroundColorAttributeName : ColorScheme.darkGrey]
     self.navigationController?.navigationBar.titleTextAttributes = attributes
   }
   
@@ -112,11 +118,21 @@ class ContactView: UIViewController {
   
   // MARK: Format Text
   internal var nonlinkAttributes: [String:Any] {
-    get { return makeAttribute(withSize: 22.0, weight: UIFontWeightLight, ofColor: .black, textAlignment: .right) }
+    get {
+      return makeAttribute(withSize: 22.0,
+                           weight: UIFontWeightLight,
+                           ofColor: ColorScheme.darkGrey,
+                           textAlignment: .right)
+    }
   }
   
   internal var linkAttributes: [String:Any] {
-    get { return makeAttribute(withSize: 21.5, weight: UIFontWeightLight, ofColor: ColorScheme.primaryColor, textAlignment: .right) }
+    get {
+      return makeAttribute(withSize: 21.5,
+                           weight: UIFontWeightLight,
+                           ofColor: ColorScheme.primary,
+                           textAlignment: .right)
+    }
   }
   
   internal func appendAttributeText(of text:String,with attributes:[String:Any],to attrText: NSMutableAttributedString) {

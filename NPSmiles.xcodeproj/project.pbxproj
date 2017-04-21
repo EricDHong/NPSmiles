@@ -22,6 +22,7 @@
 		1AA0C2981EA84A5400D97361 /* NewsItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0C2971EA84A5400D97361 /* NewsItemCellView.swift */; };
 		1ABF48B91EA9520F008DD9F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF48B81EA9520F008DD9F6 /* LoginViewController.swift */; };
 		1ABF48BB1EA9523F008DD9F6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF48BA1EA9523F008DD9F6 /* LoginView.swift */; };
+		1ABF48D01EA99FEB008DD9F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ABF48CF1EA99FEB008DD9F6 /* GoogleService-Info.plist */; };
 		9F616DE24CF01F8730394E0C /* libPods-NPSmiles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA10DD7405F5EFA2B63CC75A /* libPods-NPSmiles.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		1AA0C2971EA84A5400D97361 /* NewsItemCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItemCellView.swift; sourceTree = "<group>"; };
 		1ABF48B81EA9520F008DD9F6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1ABF48BA1EA9523F008DD9F6 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1ABF48CF1EA99FEB008DD9F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6F746F664CDB1606E9C17027 /* Pods-NPSmiles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPSmiles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NPSmiles/Pods-NPSmiles.debug.xcconfig"; sourceTree = "<group>"; };
 		BA10DD7405F5EFA2B63CC75A /* libPods-NPSmiles.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NPSmiles.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 			children = (
 				1A1CA8771EA1FFC9001A3192 /* AppDelegate.swift */,
 				1A1CA8831EA1FFC9001A3192 /* Info.plist */,
+				1ABF48CF1EA99FEB008DD9F6 /* GoogleService-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				1A1CA8921EA20582001A3192 /* Launch Screen.storyboard in Resources */,
 				1A1CA87F1EA1FFC9001A3192 /* Assets.xcassets in Resources */,
+				1ABF48D01EA99FEB008DD9F6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

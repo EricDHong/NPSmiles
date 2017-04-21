@@ -20,10 +20,10 @@ class NewsFeedView: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navigationItem.title = "Feed"
+    self.navigationItem.title = "News"
     let font = UIFont.systemFont(ofSize: 25.0, weight: UIFontWeightThin)
     self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : font,
-                                                                    NSForegroundColorAttributeName : ColorScheme.primaryColor]
+                                                                    NSForegroundColorAttributeName : ColorScheme.darkGrey]
   }
   
   private func setupNewsFeed() {

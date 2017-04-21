@@ -20,6 +20,7 @@ class NewsItemCellView: UICollectionViewCell {
   let headerTextLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.systemFont(ofSize: 18.0, weight: UIFontWeightRegular)
+    label.textColor = ColorScheme.darkGrey
     label.backgroundColor = .blue
     return label
   }()
