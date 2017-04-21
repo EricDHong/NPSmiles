@@ -16,10 +16,16 @@ class NewsFeedView: UIViewController {
   override func loadView() {
     super.loadView()
     setupNewsFeed()
+    setupNewsFeedProperties()
+    constrainNewsFeed()
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupNavBar()
+  }
+  
+  private func setupNavBar() {
     self.navigationItem.title = "News"
     let font = UIFont.systemFont(ofSize: 25.0, weight: UIFontWeightThin)
     self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : font,
@@ -28,10 +34,16 @@ class NewsFeedView: UIViewController {
   
   private func setupNewsFeed() {
     newsFeed = UICollectionView(frame: view.bounds, collectionViewLayout: flowLayout)
-    flowLayout.minimumLineSpacing = 1.0
     newsFeed?.register(NewsItemCell.self, forCellWithReuseIdentifier: NewsItemCell.identifier)
-    newsFeed?.backgroundColor = .white
     view.addSubview(newsFeed!)
+  }
+  
+  private func setupNewsFeedProperties() {
+    newsFeed?.backgroundColor = .white
+    flowLayout.minimumLineSpacing = 1.0
+  }
+  
+  private func constrainNewsFeed() {
     newsFeed?.translatesAutoresizingMaskIntoConstraints = false
     configureConstraint(with: "H:|[v0]|", to: view, of: ["v0":newsFeed!])
     configureConstraint(with: "V:|[v0]|", to: view, of: ["v0":newsFeed!])

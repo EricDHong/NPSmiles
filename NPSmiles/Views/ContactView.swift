@@ -42,6 +42,8 @@ class ContactView: UIViewController {
     button.setTitleColor(ColorScheme.primary, for: .normal)
     button.addTarget(self, action: #selector(ContactViewController.openAddress), for: .touchUpInside)
     button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightLight)
+    button.titleLabel?.minimumScaleFactor = 0.5
+    button.titleLabel?.adjustsFontSizeToFitWidth = true
     return button
   }()
   
