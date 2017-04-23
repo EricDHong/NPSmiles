@@ -67,13 +67,3 @@ class NewsItemCellView: UICollectionViewCell {
   }
   
 }
-
-extension UICollectionViewCell {
-  func configureConstraint(with visualFormat:String, to view:UIView, of dictionaryViews:[String:Any]) {
-    let constraint = NSLayoutConstraint.constraints(withVisualFormat: visualFormat,
-                                                    options: NSLayoutFormatOptions(),
-                                                    metrics: nil,
-                                                    views: dictionaryViews)
-    view.addConstraints(constraint)
-  }
-}

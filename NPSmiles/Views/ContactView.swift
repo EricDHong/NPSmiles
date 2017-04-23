@@ -144,7 +144,7 @@ class ContactView: UIViewController {
   }
 }
 
-extension UIViewController {
+extension NSObject {
   func configureConstraint(with visualFormat:String, to view:UIView, of dictionaryViews:[String:Any]) {
     let constraint = NSLayoutConstraint.constraints(withVisualFormat: visualFormat,
                                                              options: NSLayoutFormatOptions(),
