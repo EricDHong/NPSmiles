@@ -11,9 +11,9 @@ import UIKit
 class NewsItem {
   let headerText: String
   let bodyText: String
-  let date: NSDate
+  let date: Date
   
-  init(headerText: String, bodyText: String, date: NSDate) {
+  init(headerText: String, bodyText: String, date: Date) {
     self.headerText = headerText
     self.bodyText = bodyText
     self.date = date

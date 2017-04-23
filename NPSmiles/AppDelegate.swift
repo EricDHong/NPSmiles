@@ -13,43 +13,20 @@ import GoogleMaps
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-  let tabBarController = UITabBarController()
+  let loginViewController = LoginViewController()
 
   internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     GMSServices.provideAPIKey("AIzaSyDu7AFyu0ksAf57OLoLMQoHytG3t5LFFkc")
-    setupTabBarViewControllers()
-    setRootViewController(to:tabBarController)
+    setRootViewController(to: loginViewController)
     return true
   }
   
-  private func setupTabBarViewControllers() {
-    let newsFeedVC = navControllerEmbeded(with:NewsFeedViewController())
-    let contactVC = navControllerEmbeded(with:ContactViewController())
-    tabBarController.viewControllers = [newsFeedVC,contactVC]
-    setTabBarItemName(atIndex: 0, with: "News")
-    setTabBarItemName(atIndex: 1, with: "Contact")
-  }
-  
-  private func navControllerEmbeded(with vc:UIViewController) -> UINavigationController {
-    let viewController = vc
-    let embededVC = UINavigationController(rootViewController: viewController)
-    return embededVC
-  }
-  
-  private func setTabBarItemName(atIndex index:Int,with title:String) {
-    if let item = tabBarController.tabBar.items {
-      item[index].title = title
-    }
-  }
-  
-  private func setRootViewController(to tabBarController: UITabBarController) {
+  fileprivate func setRootViewController(to controller: UIViewController) {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
     window?.backgroundColor = .white
-    window?.rootViewController = tabBarController
+    window?.rootViewController = controller
   }
-  
-  
 
 
 }

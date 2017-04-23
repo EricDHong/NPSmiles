@@ -23,7 +23,7 @@
 		1ABF48B91EA9520F008DD9F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF48B81EA9520F008DD9F6 /* LoginViewController.swift */; };
 		1ABF48BB1EA9523F008DD9F6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF48BA1EA9523F008DD9F6 /* LoginView.swift */; };
 		1ABF48D01EA99FEB008DD9F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ABF48CF1EA99FEB008DD9F6 /* GoogleService-Info.plist */; };
-		9F616DE24CF01F8730394E0C /* libPods-NPSmiles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA10DD7405F5EFA2B63CC75A /* libPods-NPSmiles.a */; };
+		EDF28A8386CCFFCE1C0B3510 /* Pods_NPSmiles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AB516C4041027F26885FB8 /* Pods_NPSmiles.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,8 +46,8 @@
 		1ABF48B81EA9520F008DD9F6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1ABF48BA1EA9523F008DD9F6 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1ABF48CF1EA99FEB008DD9F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		46AB516C4041027F26885FB8 /* Pods_NPSmiles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NPSmiles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F746F664CDB1606E9C17027 /* Pods-NPSmiles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPSmiles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NPSmiles/Pods-NPSmiles.debug.xcconfig"; sourceTree = "<group>"; };
-		BA10DD7405F5EFA2B63CC75A /* libPods-NPSmiles.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NPSmiles.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F616DE24CF01F8730394E0C /* libPods-NPSmiles.a in Frameworks */,
+				EDF28A8386CCFFCE1C0B3510 /* Pods_NPSmiles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +156,7 @@
 		998516DB44D7310878E7FE4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BA10DD7405F5EFA2B63CC75A /* libPods-NPSmiles.a */,
+				46AB516C4041027F26885FB8 /* Pods_NPSmiles.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -197,6 +197,7 @@
 					1A1CA8731EA1FFC9001A3192 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 6EL5C8CJ33;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};

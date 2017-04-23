@@ -10,9 +10,9 @@ import UIKit
 
 class StateController {
   
-  private(set) var items = [NewsItem]()
+  fileprivate(set) var items = [NewsItem]()
   
-  func addItem(item: NewsItem) {
+  func addItem(_ item: NewsItem) {
     items.append(item)
   }
   

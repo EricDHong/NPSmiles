@@ -10,7 +10,7 @@ import UIKit
 
 class NewsFeedView: UIViewController {
   
-  private let flowLayout = UICollectionViewFlowLayout()
+  fileprivate let flowLayout = UICollectionViewFlowLayout()
   internal var newsFeed:UICollectionView?
 
   override func loadView() {
@@ -25,25 +25,25 @@ class NewsFeedView: UIViewController {
     setupNavBar()
   }
   
-  private func setupNavBar() {
+  fileprivate func setupNavBar() {
     self.navigationItem.title = "News"
     let font = UIFont.systemFont(ofSize: 25.0, weight: UIFontWeightThin)
     self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : font,
                                                                     NSForegroundColorAttributeName : ColorScheme.darkGrey]
   }
   
-  private func setupNewsFeed() {
+  fileprivate func setupNewsFeed() {
     newsFeed = UICollectionView(frame: view.bounds, collectionViewLayout: flowLayout)
     newsFeed?.register(NewsItemCell.self, forCellWithReuseIdentifier: NewsItemCell.identifier)
     view.addSubview(newsFeed!)
   }
   
-  private func setupNewsFeedProperties() {
+  fileprivate func setupNewsFeedProperties() {
     newsFeed?.backgroundColor = .white
     flowLayout.minimumLineSpacing = 1.0
   }
   
-  private func constrainNewsFeed() {
+  fileprivate func constrainNewsFeed() {
     newsFeed?.translatesAutoresizingMaskIntoConstraints = false
     configureConstraint(with: "H:|[v0]|", to: view, of: ["v0":newsFeed!])
     configureConstraint(with: "V:|[v0]|", to: view, of: ["v0":newsFeed!])

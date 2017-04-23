@@ -26,19 +26,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>068C7C89C209F77E774FA1A407AFD62A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D128113CD33CDE7B556287119D688BD1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>08F1229163C7F5E61C7C4B361510F11C</key>
 		<dict>
 			<key>isa</key>
@@ -52,26 +39,70 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>10C3A8B7FA080AD54D4600FF069C05AB</key>
+		<key>0C4351F469FAD7CF37DF9287EEDD2459</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>60CD0E8C6ABD7B5B7794C90DAC137B15</string>
-				<string>3DB5AE79F5166CFB78B7E96761650292</string>
-				<string>2E0B714C23F5E8B8326149744E5CF0DE</string>
-				<string>EE7D3ECB21E25603FA4390E2CA411E94</string>
-				<string>7175BC02E66D0743B880133143422CAC</string>
-				<string>D85681E9310EA4B78246D70679CE5ACF</string>
-				<string>CE082D5579ABC66346F82B1C2C767A58</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-NPSmiles</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
 			<key>path</key>
-			<string>Target Support Files/Pods-NPSmiles</string>
+			<string>Pods-NPSmiles-resources.sh</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11EC6F52A95DD2B85BF98135015DB654</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1401B09E78C411C9CFACE0E98A849450</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>13AEB177BFEE8F8560CF7F8F47475C4E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1401B09E78C411C9CFACE0E98A849450</key>
+		<dict>
+			<key>fileRef</key>
+			<string>40A861AE598560AF510402A99D97E714</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>1721586BFC92D44CFD70C39E0354CE68</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-NPSmiles.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>25983D3E51C7B993A3CBEA07D21FFD69</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DF4566780EFB2BD51537EDCA2E1D4AA7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>26C94CF6FBD559155351548F2127E7DB</key>
 		<dict>
@@ -103,56 +134,16 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>2DD8848ECD2FEC97CF36E121911D1D47</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>D85681E9310EA4B78246D70679CE5ACF</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.3</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>2E0B714C23F5E8B8326149744E5CF0DE</key>
+		<key>35754AA156FD8B37A889959CDF31F0B2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>Pods-NPSmiles-dummy.m</string>
+			<string>Pods-NPSmiles.debug.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -170,7 +161,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3DB5AE79F5166CFB78B7E96761650292</key>
+		<key>38F87D0A30F8F0B3C0B83B14BCB9EF54</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -193,6 +184,19 @@
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>40A861AE598560AF510402A99D97E714</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-NPSmiles-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -223,6 +227,32 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>49846B034E9F47EAFA35F5635071EF0F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D10532BA94C7FC5C4F8ABF38F08E1149</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4B250A97A2587349D0087B321FA840F1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NPSmiles.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>4CFA8C2E94378AFFDBA3DF92FBE7E3DC</key>
 		<dict>
 			<key>children</key>
@@ -246,6 +276,30 @@
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4FF9DD87F8B7A860253683FECAD7E08C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E19EC6296E5E384FFC2FA138FF40F80B</string>
+				<string>1721586BFC92D44CFD70C39E0354CE68</string>
+				<string>9315375B411579455637421239AE3799</string>
+				<string>38F87D0A30F8F0B3C0B83B14BCB9EF54</string>
+				<string>DF4566780EFB2BD51537EDCA2E1D4AA7</string>
+				<string>E0C55703C8AC08766CBF5CE7AAA86433</string>
+				<string>0C4351F469FAD7CF37DF9287EEDD2459</string>
+				<string>40A861AE598560AF510402A99D97E714</string>
+				<string>35754AA156FD8B37A889959CDF31F0B2</string>
+				<string>4B250A97A2587349D0087B321FA840F1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-NPSmiles</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-NPSmiles</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -320,38 +374,73 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>529821DD1D5CBEC8978991976607B563</key>
+		<key>52F26AA1119DAFA670991FE6596D7737</key>
 		<dict>
-			<key>fileRef</key>
-			<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
+			<key>baseConfigurationReference</key>
+			<string>35754AA156FD8B37A889959CDF31F0B2</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-NPSmiles/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-NPSmiles/Pods-NPSmiles.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_NPSmiles</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>60CD0E8C6ABD7B5B7794C90DAC137B15</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-NPSmiles-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>68EB1F92213295E3F4B939547FEFC59D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>10C3A8B7FA080AD54D4600FF069C05AB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>Debug</string>
 		</dict>
 		<key>70324FDF1FBB41BEA92DE76E00BD3E96</key>
 		<dict>
@@ -363,19 +452,6 @@
 			<string>GooglePlaces.framework</string>
 			<key>path</key>
 			<string>Frameworks/GooglePlaces.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7175BC02E66D0743B880133143422CAC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-NPSmiles-resources.sh</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -457,6 +533,20 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>752BBE8E7C496C93029BB44FF59EB263</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>52F26AA1119DAFA670991FE6596D7737</string>
+				<string>D829A5D1F2530CDDC51B39506E47AB3A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
 		<key>7DB346D0F39D3F0E887471402A8071AB</key>
 		<dict>
 			<key>children</key>
@@ -464,13 +554,26 @@
 				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
 				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
 				<string>385FA015FFB9210F372AB1078B856AAB</string>
-				<string>BA51885DC3B44055A23BC7FDEAC88740</string>
-				<string>68EB1F92213295E3F4B939547FEFC59D</string>
+				<string>49846B034E9F47EAFA35F5635071EF0F</string>
+				<string>A2E350AA5B4FA2916B71163F1A8F2680</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8284021F72B86F056226E7F67850BC21</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>13AEB177BFEE8F8560CF7F8F47475C4E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>82CE66B3B7EC3F6274BF43A52FEEAE6E</key>
 		<dict>
@@ -483,6 +586,19 @@
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9315375B411579455637421239AE3799</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-NPSmiles-acknowledgements.markdown</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -505,29 +621,18 @@
 			<key>xcLanguageSpecificationIdentifier</key>
 			<string>xcode.lang.ruby</string>
 		</dict>
-		<key>9CCABCC35426AE0C30A56A842AA31CA3</key>
+		<key>A2E350AA5B4FA2916B71163F1A8F2680</key>
 		<dict>
-			<key>buildConfigurationList</key>
-			<string>FD1B7FB9BDFE886928A36F769B332B31</string>
-			<key>buildPhases</key>
+			<key>children</key>
 			<array>
-				<string>068C7C89C209F77E774FA1A407AFD62A</string>
-				<string>D36A0BFD25D7D44A0AC32354839F8AC8</string>
+				<string>4FF9DD87F8B7A860253683FECAD7E08C</string>
 			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
 			<key>isa</key>
-			<string>PBXNativeTarget</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Pods-NPSmiles</string>
-			<key>productName</key>
-			<string>Pods-NPSmiles</string>
-			<key>productReference</key>
-			<string>DFCBA0DFB8E8CFEFE23AE35FBFF7E159</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A92DFDA40F47C0FD221B2872C31099A1</key>
 		<dict>
@@ -583,18 +688,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>BA51885DC3B44055A23BC7FDEAC88740</key>
+		<key>B323A0AE1BAF094C864F487649B5B058</key>
 		<dict>
-			<key>children</key>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>DFCBA0DFB8E8CFEFE23AE35FBFF7E159</string>
+				<string>25983D3E51C7B993A3CBEA07D21FFD69</string>
 			</array>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>BC3CA7F9E30CC8F7E2DD044DD34432FC</key>
 		<dict>
@@ -606,19 +711,6 @@
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CE082D5579ABC66346F82B1C2C767A58</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NPSmiles.release.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -635,25 +727,20 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>D128113CD33CDE7B556287119D688BD1</key>
+		<key>D10532BA94C7FC5C4F8ABF38F08E1149</key>
 		<dict>
-			<key>fileRef</key>
-			<string>2E0B714C23F5E8B8326149744E5CF0DE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D36A0BFD25D7D44A0AC32354839F8AC8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>529821DD1D5CBEC8978991976607B563</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
 			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_NPSmiles.framework</string>
+			<key>path</key>
+			<string>Pods-NPSmiles.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>D41D8CD98F00B204E9800998ECF8427E</key>
 		<dict>
@@ -681,7 +768,7 @@
 			<key>mainGroup</key>
 			<string>7DB346D0F39D3F0E887471402A8071AB</string>
 			<key>productRefGroup</key>
-			<string>BA51885DC3B44055A23BC7FDEAC88740</string>
+			<string>49846B034E9F47EAFA35F5635071EF0F</string>
 			<key>projectDirPath</key>
 			<string></string>
 			<key>projectReferences</key>
@@ -690,38 +777,91 @@
 			<string></string>
 			<key>targets</key>
 			<array>
-				<string>9CCABCC35426AE0C30A56A842AA31CA3</string>
+				<string>F6F194A1C1526958E70B99EDC48DB0A5</string>
 			</array>
 		</dict>
-		<key>D85681E9310EA4B78246D70679CE5ACF</key>
+		<key>D829A5D1F2530CDDC51B39506E47AB3A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>4B250A97A2587349D0087B321FA840F1</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-NPSmiles/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-NPSmiles/Pods-NPSmiles.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_NPSmiles</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>DF4566780EFB2BD51537EDCA2E1D4AA7</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>Pods-NPSmiles.debug.xcconfig</string>
+			<string>Pods-NPSmiles-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>DFCBA0DFB8E8CFEFE23AE35FBFF7E159</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods-NPSmiles.a</string>
-			<key>path</key>
-			<string>libPods-NPSmiles.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>EE7D3ECB21E25603FA4390E2CA411E94</key>
+		<key>E0C55703C8AC08766CBF5CE7AAA86433</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -733,6 +873,44 @@
 			<string>Pods-NPSmiles-frameworks.sh</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E19EC6296E5E384FFC2FA138FF40F80B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F6F194A1C1526958E70B99EDC48DB0A5</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>752BBE8E7C496C93029BB44FF59EB263</string>
+			<key>buildPhases</key>
+			<array>
+				<string>B323A0AE1BAF094C864F487649B5B058</string>
+				<string>8284021F72B86F056226E7F67850BC21</string>
+				<string>11EC6F52A95DD2B85BF98135015DB654</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-NPSmiles</string>
+			<key>productName</key>
+			<string>Pods-NPSmiles</string>
+			<key>productReference</key>
+			<string>D10532BA94C7FC5C4F8ABF38F08E1149</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
 		</dict>
 		<key>F88E2A6AB865C2A1EB845B27A14348FA</key>
 		<dict>
@@ -761,60 +939,6 @@
 			<string>Resources</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FAFC1948B8EB3E3F3EBD2792824C7A0D</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>CE082D5579ABC66346F82B1C2C767A58</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.3</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>FD1B7FB9BDFE886928A36F769B332B31</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>2DD8848ECD2FEC97CF36E121911D1D47</string>
-				<string>FAFC1948B8EB3E3F3EBD2792824C7A0D</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>

@@ -12,8 +12,8 @@ import GoogleMaps
 class ContactView: UIViewController {
   
   //MARK: Views
-  private var scrollView = UIScrollView()
-  private var contentView: UIView = {
+  fileprivate var scrollView = UIScrollView()
+  fileprivate var contentView: UIView = {
     let view = UIView()
     view.backgroundColor = .white
     return view
@@ -68,7 +68,7 @@ class ContactView: UIViewController {
   }
   
   //MARK: Setup views
-  private func setupNavigationBar() {
+  fileprivate func setupNavigationBar() {
     self.navigationItem.title = "Contact Info"
     let font = UIFont.systemFont(ofSize: 25.0, weight: UIFontWeightThin)
     let attributes = [NSFontAttributeName : font,
@@ -76,7 +76,7 @@ class ContactView: UIViewController {
     self.navigationController?.navigationBar.titleTextAttributes = attributes
   }
   
-  private func setupScrollView(with containerView:UIView) {
+  fileprivate func setupScrollView(with containerView:UIView) {
     let iphone5Height: CGFloat = 568
     let contentSizeHeight = ScreenSize.height == iphone5Height ? ScreenSize.height+60 : ScreenSize.height
     scrollView.contentSize = CGSize(width: ScreenSize.width, height: contentSizeHeight)
@@ -86,13 +86,13 @@ class ContactView: UIViewController {
     scrollView.addSubview(containerView)
   }
   
-  private func addSubviewsToContentView() {
+  fileprivate func addSubviewsToContentView() {
     let views = [contactInfoTextView, googleMapView, addressButton, officeHoursTextView]
     for viewObject in views { contentView.addSubview(viewObject) }
   }
   
   //MARK: Constraints
-  private func disableAutoresizingMaskIntoConstraints() {
+  fileprivate func disableAutoresizingMaskIntoConstraints() {
     scrollView.translatesAutoresizingMaskIntoConstraints = false
     contactInfoTextView.translatesAutoresizingMaskIntoConstraints = false
     googleMapView.translatesAutoresizingMaskIntoConstraints = false
@@ -100,7 +100,7 @@ class ContactView: UIViewController {
     officeHoursTextView.translatesAutoresizingMaskIntoConstraints = false
   }
   
-  private func setupConstraints() {
+  fileprivate func setupConstraints() {
     disableAutoresizingMaskIntoConstraints()
     
     configureConstraint(with: "H:|[v0]|", to: view, of: ["v0" : scrollView])

@@ -19,13 +19,13 @@ class ContactViewController: ContactView {
     setMapMarker()
   }
   
-  private func setViewsText() {
+  fileprivate func setViewsText() {
     officeHoursTextView.text = "OFFICE HOURS:\n\(NorthPotomacSmiles.officeHours)"
     addressButton.setTitle("\(NorthPotomacSmiles.address)", for: .normal)
     attributeContactInfoText()
   }
   
-  private func attributeContactInfoText() {
+  fileprivate func attributeContactInfoText() {
     for index in 0..<NorthPotomacSmiles.contactInfoText.count {
       let attributes = (index % 2 == 0) ? nonlinkAttributes : linkAttributes
       appendAttributeText(of: NorthPotomacSmiles.contactInfoText[index],
@@ -36,7 +36,7 @@ class ContactViewController: ContactView {
   
   func openAddress() { UIApplication.shared.open(URL(string:"https://goo.gl/maps/zZD917111AJ2")!) }
   
-  private func setMapMarker() {
+  fileprivate func setMapMarker() {
     let marker = GMSMarker()
     marker.position = CLLocationCoordinate2D(latitude: NorthPotomacSmiles.latitude,
                                              longitude: NorthPotomacSmiles.longitude)
